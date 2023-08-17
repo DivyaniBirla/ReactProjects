@@ -1,0 +1,39 @@
+.sInfo{
+  border:2px solid;
+  border-radius: 20px;
+  color:rgb(107, 206, 207);
+  background-color:rgb(8, 8, 43);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  font-style:oblique ;
+}
+
+.sInfo img {
+  /* border:1px solid; */
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.student{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:1px;
+  width:60%;
+  margin:auto;
+  padding-top: 1%;
+}
+
+.tContent{
+  padding-top: 2%;
+}
+.tCon{
+  background-color: rgb(2, 2, 31);
+  color:azure;
+  /* border:2px solid blue; */
+  border-radius: 4%;
+
+  }
+
+  .tCon td{
+    width:50%;
+  }
+ 

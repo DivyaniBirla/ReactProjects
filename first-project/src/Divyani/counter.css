@@ -1,0 +1,23 @@
+#counter {
+    font-style: serif;
+    width:50%;
+   /* display:flex; */
+    margin: auto;
+    color: rgb(27, 26, 29);
+    border:1px solid; 
+    background-color:gainsboro;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+
+span {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  
+  button {
+    background-color: #242429;
+    font-size: 20px;
+    padding: 3px 13px;
+    color:rgb(243, 239, 239);
+    cursor:pointer;
+  }
