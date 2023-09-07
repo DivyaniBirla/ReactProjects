@@ -37,7 +37,7 @@ const [view,setView] = useState("cards");
     <h3 style={{textShadow:"0 0 3px navy"}}><i><ins>About Company's</ins></i></h3>
     { view=="cards"?(
          <div id ="cards">
-            {/* <h3 style={{textShadow:"0 0 3px navy"}}><i>About Company's</i></h3> */}
+            
             {
                 cardData.map ( (card,i) => (
                 // <SingleCard key={i} data={card}/>
