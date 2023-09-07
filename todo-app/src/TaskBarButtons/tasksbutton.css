@@ -1,0 +1,49 @@
+.header {
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  background: linear-gradient(90deg, rgb(55, 61, 78) 50%, rgba(19, 29, 55, 1) 100%);
+
+}
+
+.buttons {
+  display: grid;
+  /* grid-template-rows: repeat(1,1fr); */
+  border-bottom: 1px solid #ccc;
+
+}
+
+.buttons button {
+  display: flex;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-Size:16px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #9ea4aa;
+}
+
+.footer {
+ 
+  padding: 12px 0;
+}
+
+.footer button {
+  font-Size:16px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+}
+
+.footer button:hover {
+  background-color: #999;
+}

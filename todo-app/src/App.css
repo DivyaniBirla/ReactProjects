@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+body{
+  color:#d1dfe3;
+  background: rgb(19,29,55);
+  background: linear-gradient(90deg, rgba(19,29,55,1) 0%, rgba(75,90,94,1) 100%);
+  background: linear-gradient(90deg, rgba(19,29,55,1) 0%, rgb(55, 61, 78) 100%);
+  
+}

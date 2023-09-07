@@ -1,27 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import { Register } from './Login/Register';
+import React from 'react';
+import { MainRoutes } from './Routes/MainRoutes';
 
 function App() {
   return (
     <div className="App">
-      <Register/>
+     <MainRoutes/>
+     <button type="button" onClick={() => window.location.href = "/Login"} style={{border:'none'}}>Create New Account</button>
     </div>
   );
 }
 
 export default App;
- {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+
