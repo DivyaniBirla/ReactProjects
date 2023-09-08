@@ -10,19 +10,19 @@ import { TodoItems } from './TodoItems';
 import { useEffect } from 'react';
 // import { DueDate } from '../TaskBarButtons/DueDate';
 
-export const Todo = ({ handleTaskBar, searchtodoItems , setTodoItems}) => {
+export const Todo = ({ handleTaskBar, searchtodoItems, setTodoItems }) => {
 
   const init = {
     id: Date.now(),
     title: '',
     status: false,
-    important: false
+    important: false,
+    // creationDate : 
   };
 
   const [EditItem, setEditItem] = useState(false)
   const { showTaskBar, setshowTaskBar } = handleTaskBar
   const [task, setTask] = useState(init);
-  // const [todoItems, setTodoItems] = useState(JSON.parse(localStorage.getItem("todoItems")) || [])
   const isButtonEnabled = task.title !== '';
 
   const handleClick = () => {
@@ -48,7 +48,7 @@ export const Todo = ({ handleTaskBar, searchtodoItems , setTodoItems}) => {
           setEditItem(false)
           return
         }
-        console.log(task)
+        // console.log(task)
         const newArray = searchtodoItems.map((el, i) => {
           if (el.id === task.id) {
             el.title = task.title
@@ -79,15 +79,9 @@ export const Todo = ({ handleTaskBar, searchtodoItems , setTodoItems}) => {
     setTask(init)
   }
 
-  // useEffect(() => {
-  //   console.log(task.title)
-  //   if (task.title == "") {
-  //     setEditItem(false)
-  //   }
-  // }, [task.title])
-
   return (
     <div>
+       
       <div className="allTodo">
         <div className="inTodo" onClick={handleClick} >
           <span className="input-icon">{
@@ -97,11 +91,11 @@ export const Todo = ({ handleTaskBar, searchtodoItems , setTodoItems}) => {
           </span>
           <input required type="text" placeholder='Add a Task' value={task.title}
             onChange={(e) => {
-              if(task.title.length==1){ 
+              if (task.title.length == 1) {
                 setEditItem(false)
               }
-            setTask({ ...task, ["title"]: e.target.value })            
-          }
+              setTask({ ...task, ["title"]: e.target.value })
+            }
             } />
         </div>
       </div>
@@ -121,19 +115,19 @@ export const Todo = ({ handleTaskBar, searchtodoItems , setTodoItems}) => {
       }
 
       {
-        searchtodoItems.length != 0 ? 
-        <TodoItems
-        todoItems={searchtodoItems}
-        searchtodoItems={searchtodoItems}
-        updateImportant={updateLocalStorage}
-        updateStatus={updateLocalStorage}
-        handleEdit={handleEdit}
-        handleDelete={handleDelete} />
-
-        :
-        <div className="todoItems">No task added yet!</div>
+        searchtodoItems.length != 0 ?
+          <TodoItems
+            todoItems={searchtodoItems}
+            searchtodoItems={searchtodoItems}
+            updateImportant={updateLocalStorage}
+            updateStatus={updateLocalStorage}
+            handleEdit={handleEdit}
+            handleDelete={handleDelete}
+            setTodoItems ={setTodoItems} />
+          :
+          <div className="todoItems">No task added yet!</div>
       }
-     
+
       {/* <DueDate/> */}
     </div>
   );

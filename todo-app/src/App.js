@@ -23,9 +23,12 @@ function App() {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-    console.log(option, "Option")
     setShowOptions(false);
-    lsTodoitems.filter((el) => option)
+    if(option.value == 'importance'){
+      let SortImp = lsTodoitems.filter((el) => el.important == true) 
+      setTodoItems(SortImp)
+    }
+   
   };
 
   const handleTaskBar = {

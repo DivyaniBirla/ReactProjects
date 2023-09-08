@@ -8,15 +8,13 @@ import Tooltip from '../DynamicActions/Tooltip';
 
 const options = [
     { value: 'importance', label: <div className='allOpt'><div><PiStarLight /></div><div>Importance</div></div> },
-    { value: 'due_date', label: <div className='allOpt'><div><BsCalendar3Week /></div><div>Due Date</div></div> },
     { value: 'alphabetically', label: <div className='allOpt'><div><BiSortAlt2 /></div><div>Alphabetically</div></div> },
     { value: 'creation_date', label: <div className='allOpt'><div><LuCalendarPlus /></div><div>Creation Date</div></div> },
+    { value: 'Cancel', label: <div className='allOpt'><div><BsCalendar3Week /></div><div>Cancel</div></div> },
 ];
 
-export const SubNavBar = ({ handleOptionSelect, selectedOption, showOptions,setShowOptions }) => {
+export const SubNavBar = ({ handleOptionSelect, selectedOption, showOptions, setShowOptions, setTodoItems }) => {
     
-
-
     const handleButtonClick = () => {
         setShowOptions(!showOptions);
     };
@@ -24,8 +22,11 @@ export const SubNavBar = ({ handleOptionSelect, selectedOption, showOptions,setS
 
     const handleBlur = () => {
         setTimeout(() => {
-            setShowOptions(false);
+            setShowOptions(false); 
+           
+
         }, 200);
+        
     };
 
     return (
